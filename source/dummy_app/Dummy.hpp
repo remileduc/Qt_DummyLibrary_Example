@@ -1,7 +1,8 @@
 #ifndef DUMMY_HPP
 #define DUMMY_HPP
 
-#include <QDebug>
+#include <iostream>
+
 #include <QObject>
 
 class Dummy : public QObject
@@ -12,7 +13,7 @@ public:
 	Dummy(QObject *parent = nullptr) : QObject(parent) {}
 
 public slots:
-	void dummySlot() { qDebug() << "\n\tSignal has correctly been sent, received by Dummy QObject :)\n"; }
+	void dummySlot() { std::cout << "\n\tSignal has correctly been sent, received by Dummy QObject :)\n"; }
 };
 
 #endif // DUMMY_HPP
