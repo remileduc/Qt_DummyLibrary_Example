@@ -15,6 +15,9 @@ target_include_directories(DummyApp PRIVATE
 	../dummy_lib/
 	../dummy_static/
 )
+target_compile_definitions(DummyApp PRIVATE
+	DummyLib_IMPORT
+)
 target_link_libraries(DummyApp
 	# Qt
 	Qt5::Core

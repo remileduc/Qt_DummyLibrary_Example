@@ -19,7 +19,8 @@ int main(int argc, char **argv)
 	QObject::connect(&mainWidget, &DummyLib::dummySignal, &dumb, &Dummy::dummySlot);
 	QObject::connect(&mainWidget, SIGNAL(dummySignal()), &dumb, SLOT(dummySlot()));
 	mainWidget.sendDummySignal();
-	statlib.dummyStaticFunction();
+	statlib.dummyFunction();
+	DummyStatic::dummyStaticFunction();
 
 	mainWidget.show();
 	return app.exec();

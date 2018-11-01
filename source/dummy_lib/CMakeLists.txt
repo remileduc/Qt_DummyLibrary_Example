@@ -9,7 +9,11 @@ add_library(DummyLib SHARED
 	DummyLib.cpp
 	DummyLibStatic.cpp
 )
+set_target_properties(DummyLib DummyStatic PROPERTIES POSITION_INDEPENDENT_CODE TRUE)
 target_compile_definitions(DummyLib PRIVATE
+	DummyLib_EXPORT
+)
+target_compile_definitions(DummyStatic PRIVATE
 	DummyLib_EXPORT
 )
 target_include_directories(DummyLib PRIVATE
@@ -25,4 +29,3 @@ target_link_libraries(DummyLib
 	# DummyStatic
 	DummyStatic
 )
-set_target_properties(DummyLib DummyStatic PROPERTIES POSITION_INDEPENDENT_CODE TRUE)

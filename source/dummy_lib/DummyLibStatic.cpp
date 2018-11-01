@@ -7,4 +7,5 @@
 
 #include <DummyStatic.hpp>
 
-volatile auto _dumb = &DummyStatic::dummyStaticFunction;
+volatile auto _DummyStatic_dummyStaticFunction = &DummyStatic::dummyStaticFunction;
+volatile auto _DummyStatic_dummyFunction = &DummyStatic::dummyFunction;

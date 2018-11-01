@@ -13,5 +13,6 @@ DummyLib::DummyLib(QWidget * parent) : QWidget(parent)
 
 void DummyLib::sendDummySignal()
 {
+	DummyStatic::dummyStaticFunction();
 	emit dummySignal();
 }
