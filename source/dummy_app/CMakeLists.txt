@@ -13,6 +13,7 @@ target_include_directories(DummyApp PRIVATE
 	${CMAKE_CURRENT_SOURCE_DIR}
 	# DummyLib
 	../dummy_lib/
+	../dummy_static/
 )
 target_link_libraries(DummyApp
 	# Qt

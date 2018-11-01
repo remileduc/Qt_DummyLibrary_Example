@@ -3,6 +3,7 @@
 #include <QApplication>
 
 #include <DummyLib.hpp>
+#include <DummyStatic.hpp>
 
 #include "Dummy.hpp"
 
@@ -10,6 +11,7 @@ int main(int argc, char **argv)
 {
 	QApplication app(argc, argv);
 
+	DummyStatic statlib;
 	DummyLib mainWidget;
 	Dummy dumb;
 
@@ -17,6 +19,7 @@ int main(int argc, char **argv)
 	QObject::connect(&mainWidget, &DummyLib::dummySignal, &dumb, &Dummy::dummySlot);
 	QObject::connect(&mainWidget, SIGNAL(dummySignal()), &dumb, SLOT(dummySlot()));
 	mainWidget.sendDummySignal();
+	statlib.dummyStaticFunction();
 
 	mainWidget.show();
 	return app.exec();

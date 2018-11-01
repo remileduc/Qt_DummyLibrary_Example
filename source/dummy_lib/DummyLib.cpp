@@ -1,6 +1,8 @@
 #include <QLabel>
 #include <QVBoxLayout>
 
+#include <DummyStatic.hpp>
+
 #include "DummyLib.hpp"
 
 DummyLib::DummyLib(QWidget * parent) : QWidget(parent)

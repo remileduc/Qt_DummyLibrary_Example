@@ -51,6 +51,10 @@ set(CMAKE_AUTOUIC ON)
 project(DummyApp CXX)
 
 #########################
+# DummyStatic
+add_subdirectory("dummy_static")
+
+#########################
 # DummyLib
 add_subdirectory("dummy_lib")
 

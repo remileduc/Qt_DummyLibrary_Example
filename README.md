@@ -29,6 +29,19 @@ QT Library test with CMake
 
 Dummy example to try to build a library with Qt and use it.
 
+Purpose
+-------
+
+The goal is to create a simple example to see how we can create a shared library thanks to Qt, and use it in an executable.
+
+In this repo, you have 3 folders under `source`
+- `dummy_static`: it creates a static library that exposes one class `DummyStatic` (that doesn't make use of Qt)
+- `dummy_lib`: it creates a shared library that is compiled and linked with `dummy_static`. It should expose `DummyStatic` and also `DummyLib`
+- `dummy_app`: the applications that is linked to `dummy_lib` and uses the 2 exposed class `DummyStatic` and `DummyLib`
+
+Build
+-----
+
 To build the project, follow these steps:
 
 ```bash
