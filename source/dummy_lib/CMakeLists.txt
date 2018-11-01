@@ -25,3 +25,4 @@ target_link_libraries(DummyLib
 	# DummyStatic
 	DummyStatic
 )
+set_target_properties(DummyLib DummyStatic PROPERTIES POSITION_INDEPENDENT_CODE TRUE)

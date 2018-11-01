@@ -7,8 +7,4 @@
 
 #include <DummyStatic.hpp>
 
-const auto _dumb = ([]() -> int {
-	DummyStatic().dummyStaticFunction();
-
-	return 0;
-})();
+volatile auto _dumb = &DummyStatic::dummyStaticFunction;
